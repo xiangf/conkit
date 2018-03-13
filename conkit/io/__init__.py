@@ -123,7 +123,7 @@ def read(fname, format, f_id='conkit'):
 
     kwargs = {"f_id": f_id}
     if format == "a3m-inserts":
-        kwargs["remove_inserts"] = False
+        kwargs["remove_insert"] = False
 
     with open_f_handle(fname, "read") as f_in:
         hierarchy = parser_in.read(f_in, **kwargs)
